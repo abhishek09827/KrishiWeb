@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Crop Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <form action="http://localhost:5000/predict" method="post">
+        <lable> N</lable>
+        <input type="text" name="N" placeholder='N'>
+        <lable> P</lable>
+        <input type="text" name="input_val" placeholder='P'>
+        <lable> K</lable>
+        <input type="text" name="P" placeholder='K'>
+        <lable> Temperature</lable>
+        <input type="text" name="Temperature" placeholder='Temperature'>
+        <lable> Humidity</lable>
+        <input type="text" name="Humidity" placeholder='Humidity'>
+        <lable> pH</lable>
+        <input type="text" name="pH" placeholder='pH'>
+        <lable> Rainfall</lable>
+        <input type="text" name="Rainfall" placeholder='Rainfall'>
+
+        <button type="text" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
